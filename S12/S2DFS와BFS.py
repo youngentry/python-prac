@@ -27,8 +27,8 @@ dfs_result =[]
 dfs_visited = [False for _ in range(N+1)]
 
 def dfs(start):
-    dfs_visited[start] = True
     dfs_result.append(start)
+    dfs_visited[start] = True
     for next_node in routes[start]:
         if not dfs_visited[next_node]:
             dfs(next_node)
